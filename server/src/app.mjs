@@ -8,7 +8,7 @@ import { geocode } from '../../utils.mjs';
 const app = express();
 
 //Default Port
-const port = process.env.PORT || 3000;
+const port = 'https://stormweather.herokuapp.com/' || 3000;
 
 //Define paths for Express config
 const __dirName = path.dirname(fileURLToPath(import.meta.url));

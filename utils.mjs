@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 //BASE URL
-const weatherUrl =
-	'http://api.weatherstack.com/current?access_key=4c7de1d63ea7ab7aedfdf183c9da9e85&query=37.8267,-122.4233';
-const geocodeUrl =
-	'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoibGF0aWhhZ2EiLCJhIjoiY2t5OHRoY3loMWhkeDJvb3llamxvdmYzayJ9.c4YN0d83a19osF8BPtxCDw';
+// const weatherUrl =
+// 	'http://api.weatherstack.com/current?access_key=4c7de1d63ea7ab7aedfdf183c9da9e85&query=37.8267,-122.4233';
+// const geocodeUrl =
+// 	'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoibGF0aWhhZ2EiLCJhIjoiY2t5OHRoY3loMWhkeDJvb3llamxvdmYzayJ9.c4YN0d83a19osF8BPtxCDw';
 
 //General Fetching Function
 export const fetchUrl = async (url) => {
