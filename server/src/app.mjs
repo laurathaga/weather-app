@@ -26,22 +26,19 @@ app.use(express.static(publicDir));
 
 app.get('', (req, res) => {
 	res.render('index', {
-		title: 'Weather',
-		name: 'Laurat Hajrullaaga'
+		title: `StormWeather`
 	});
 });
 
 app.get('/about', (req, res) => {
 	res.render('about', {
-		title: 'About Page',
-		name: 'laurat haga'
+		title: 'About'
 	});
 });
 
 app.get('/help', (req, res) => {
 	res.render('help', {
-		title: 'Help Page',
-		name: 'laurat haga'
+		title: 'Help'
 	});
 });
 
@@ -55,7 +52,7 @@ app.get('/weather', async (req, res) => {
 	const data = await geocode(req.query.address);
 	res.send({
 		address: data.location,
-		current: data.current.temperature
+		current: data.data
 	});
 });
 

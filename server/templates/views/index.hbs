@@ -11,22 +11,61 @@
 <body>
     <div class="container">
         <div class="main_content">
-            {{>header}}
-            <h2>From: {{name}}</h2>
+            
 
-            <p id="error" ></p>
+            <p id="error"></p>
             <form id="weather_form" >
-                <input type="text" id="address" name="address" placeholder="search location" >
+                <input type="text" id="address" name="address" placeholder="location" >
                 <button type="submit" >Search</button>
             </form>
 
-            <p id="location-msg" ></p>
-            <p id="forecast-msg" ></p>
+            <div class="msg_wrapper">
+                <div class="weather_col" >
+                    <div class="weather_img_wrapper" >
+                        <img src="../../public/images/cloudy.png" alt="cloudy">
+                    </div>
+                    <p>Weather</p>
+                </div>
+
+                <div class="weather_col" >
+                    <div class="weather_img_wrapper" >
+                        <img src="../../public/images/wind.png" alt="wind">
+                    </div>
+                    <p>Wind stats</p>
+                </div>
+
+                <div class="weather_col" >
+                    <div class="weather_img_wrapper" >
+                        <img src="../../public/images/sunglasses.png" alt="Feels like">
+                    </div>
+                    <p>Feels like</p>
+                </div>
+
+                <div class="weather_col" >
+                    <div class="weather_img_wrapper" >
+                        <img src="" alt="">
+                    </div>
+                    <p>Text</p>
+                </div>
+
+                <div class="weather_col" >
+                    <div class="weather_img_wrapper" >
+                        <img src="" alt="">
+                    </div>
+                    <p>Text</p>
+                </div>
+                
+                <p id="location-msg" ></p>
+                <p id="forecast-msg" ></p>
+            </div>    
         </div>
 
+        {{>header}}
         {{>footer}}
     </div>
 
     <script src="/js/script.js"></script>
 </body>
 </html>
+
+

@@ -22,9 +22,7 @@ export const weathercode = async ({ latitude, longitude, location = '' } = {}) =
 	const url = `http://api.weatherstack.com/current?access_key=4c7de1d63ea7ab7aedfdf183c9da9e85&query=${longitude},${latitude}`;
 	try {
 		const data = await fetchUrl(url);
-		const { current } = data;
-
-		return { current, location };
+		return { data, location };
 	} catch (e) {
 		throw new Error('Something went wrong with this address maybe try again with a correct one');
 	}

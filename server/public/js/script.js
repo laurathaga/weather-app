@@ -4,12 +4,13 @@ const msgOne = document.querySelector('#location-msg');
 const msgTwo = document.querySelector('#forecast-msg');
 const error = document.querySelector('#error');
 error.style.display = 'none';
+let countryLocation = '';
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	const location = search.value;
+	countryLocation = search.value;
 
-	if (location === '') {
+	if (countryLocation === '') {
 		error.style.display = 'block';
 		error.textContent = 'Please Provide a Location';
 		error.style.color = 'red';
@@ -22,6 +23,7 @@ form.addEventListener('submit', (e) => {
 		try {
 			let resp = await fetch(`/weather?address=${location}`);
 			let data = await resp.json();
+			console.log(data);
 			msgOne.textContent = data.address;
 			msgTwo.textContent = data.current;
 			error.style.display = 'none';

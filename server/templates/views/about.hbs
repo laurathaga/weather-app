@@ -11,14 +11,24 @@
 <body>
     <div class="container">
         <div class="main_content">
-            {{>header}}
-
-            <h2>From: {{name}}</h2>
-            <div class="img_wrapper" >
-                <img src="/images/reddit-avatar.png"/>
+            <div class="help_content" >
+                <div class="img_wrapper" >
+                    <img src=""/>
+                </div>
+                <p>
+                    Hello everyone! This is just a random weather application.
+                    The information shown might not be tryly as expected.
+                    This was more as a showcase Project, just to show you how to get current
+                    weather analytics and more...
+                    Project was done by combining 2 different <span>API</span> with each-other,
+                    which resulted with the final location.
+                    Worth mentioning that this application was made with <span>Express.js</span> and pure <span>CSS</span> only.                    
+                </p>
             </div>
+
         </div>
 
+        {{>header}}
         {{>footer}}
     </div>
 
