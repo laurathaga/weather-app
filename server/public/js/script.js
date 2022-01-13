@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
 	msgTwo.textContent = '';
 	(async () => {
 		try {
-			let resp = await fetch(`https://stormweather.herokuapp.com/weather?address=${location}`);
+			let resp = await fetch(`/weather?address=${location}`);
 			let data = await resp.json();
 			msgOne.textContent = data.address;
 			msgTwo.textContent = data.current;
