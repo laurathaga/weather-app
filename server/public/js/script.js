@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
 	msgTwo.textContent = '';
 	(async () => {
 		try {
-			let resp = await fetch(`/weather?address=${location}`);
+			let resp = await fetch(`/weather?address=${countryLocation}`);
 			let data = await resp.json();
 			console.log(data);
 			msgOne.textContent = data.address;
