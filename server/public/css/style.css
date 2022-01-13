@@ -114,7 +114,7 @@ header {
 }
 header h1 {
 	flex: 1;
-	font-size: 3.5rem;
+	font-size: 2.7rem;
 }
 header a {
 	color: #444;
@@ -156,7 +156,7 @@ header a:hover {
 	flex-direction: row;
 	justify-content: space-between;
 	background: #fff;
-	min-height: 40rem;
+	min-height: 33rem;
 	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
@@ -177,10 +177,10 @@ header a:hover {
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
-	margin: 3rem 0;
+	margin: 2rem 0;
 }
 #weather_form input {
-	width: 200px;
+	width: 18rem;
 	transition: all .4s ease-in-out;
 }
 #weather_form input:hover {
@@ -189,7 +189,7 @@ header a:hover {
 
 #weather_form input:active,
 #weather_form input:focus {
-	width: 300px;
+	width: 22rem;
 	border-radius: 0px;
 }
 
@@ -217,7 +217,8 @@ header a:hover {
 	align-items: center;
 }
 .help_content p {
-	font-size: 1.7rem;
+	font-size: 1.5rem;
+	line-break: normal;
 	font-weight: bold;
 	letter-spacing: 1px;
 	padding: 1rem;
