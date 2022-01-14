@@ -59,7 +59,6 @@ input {
 	color: #f4f4f4;
 	padding: .7rem 1rem;
 	cursor: pointer;
-	margin-left: 1rem;
 	border-radius: 12px;
 }
 button {
@@ -87,6 +86,9 @@ h6 {
 a {
 	text-decoration: none;
 }
+#location-msg {
+	margin-bottom: 1rem;
+}
 
 .container {
 	max-width: 1200px;
@@ -99,6 +101,8 @@ a {
 }
 .main_content {
 	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 }
 footer {
 	border-top: 3px solid #111;
@@ -124,7 +128,6 @@ header a {
 }
 header a:hover {
 	color: black;
-	letter-spacing: 2px;
 }
 
 .header_link {
@@ -148,20 +151,29 @@ header a:hover {
 	background: black;
 	transition: all .3s ease-in-out;
 }
-.header_link a:hover::before {
+.header_link a::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0px;
+	height: 2px;
+	background: black;
+	transition: all .3s ease-in-out;
+}
+.header_link a:hover::before,
+.header_link a:hover::after {
 	width: 100%;
 }
 .msg_wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background: #fff;
-	min-height: 33rem;
+	background: rgba(255, 255, 255, 0.7);
+	min-height: 35rem;
 	border-radius: 5px;
-	overflow: hidden;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
 }
-
 .weather_col {
 	max-height: 100%;
 	display: flex;
@@ -170,6 +182,23 @@ header a:hover {
 	text-align: center;
 	border: .2px solid rgba(0, 0, 0, .1);
 	flex: 1;
+	transition: all .4s ease-in-out;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.weather_col > p {
+	height: 100px;
+	width: 100%;
+	text-decoration: underline;
+}
+.weather_col > p span {
+	color: indigo;
+}
+.weather_col:hover {
+	background-color: white;
+	transform: scale(105%) rotate(5deg) translateY(-20px);
+	box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
 }
 
 #weather_form {
@@ -181,6 +210,7 @@ header a:hover {
 }
 #weather_form input {
 	width: 18rem;
+	margin-right: 1rem;
 	transition: all .4s ease-in-out;
 }
 #weather_form input:hover {
@@ -239,4 +269,16 @@ header a:hover {
 .help_content p span::selection {
 	background: #fff;
 	color: black;
+}
+.weather_img_wrapper {
+	width: 100%;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.weather_img_wrapper img {
+	width: 50%;
+	height: 50%;
 }

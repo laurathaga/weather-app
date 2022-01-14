@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <div class="main_content">
-            
 
             <p id="error"></p>
             <form id="weather_form" >
@@ -19,44 +18,45 @@
                 <button type="submit" >Search</button>
             </form>
 
+            <h2 id="location-msg" ></h2>
+
             <div class="msg_wrapper">
                 <div class="weather_col" >
                     <div class="weather_img_wrapper" >
-                        <img src="../../public/images/cloudy.png" alt="cloudy">
+                        <img src="/images/cloud.png" alt="cloudy">
                     </div>
-                    <p>Weather</p>
+                    <p name="weather" >Weather</p>
                 </div>
 
                 <div class="weather_col" >
                     <div class="weather_img_wrapper" >
-                        <img src="../../public/images/wind.png" alt="wind">
+                        <img src="/images/windy.png" alt="wind">
                     </div>
-                    <p>Wind stats</p>
+                    <p name="wind" >Wind stats</p>
                 </div>
 
                 <div class="weather_col" >
                     <div class="weather_img_wrapper" >
-                        <img src="../../public/images/sunglasses.png" alt="Feels like">
+                        <img src="/images/celsius.png" alt="Feels like">
                     </div>
-                    <p>Feels like</p>
+                    <p name="temp" >Temperature</p>
                 </div>
 
                 <div class="weather_col" >
                     <div class="weather_img_wrapper" >
-                        <img src="" alt="">
+                        <img src="/images/sunglasses.png" alt="feels like">
                     </div>
-                    <p>Text</p>
+                    <p name="feels" >Feels like</p>
                 </div>
 
                 <div class="weather_col" >
                     <div class="weather_img_wrapper" >
-                        <img src="" alt="">
+                        <img src="/images/day-and-night.png" alt="day or night">
                     </div>
-                    <p>Text</p>
+                    <p name="d-n" >Day or Night</p>
                 </div>
                 
-                <p id="location-msg" ></p>
-                <p id="forecast-msg" ></p>
+                
             </div>    
         </div>
 
